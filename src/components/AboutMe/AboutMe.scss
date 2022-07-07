@@ -1,0 +1,90 @@
+@use '../GlobalStyles/GlobalStyle.scss' as *;
+
+.about-me-wrapper {
+    @include contentWrapper;
+    @include bgWrapper;
+    .about-me-container {
+        @include contentWidth;
+        display: flex;
+        min-height: 300px;
+    
+        gap: 3.2rem;
+        &__left {
+            flex-basis: 50%;
+
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+            
+        }
+        &__right {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 3rem;
+            &:hover .title{
+                color: $clr-primary;
+            }
+            .title {
+                transition: all .3s linear;
+                margin-top: 2.8rem;
+                margin-right: 3.5rem;
+                font-size: 3.2rem;
+                text-align: center;
+                font-family: 'Montserrat', sans-serif;
+
+            }
+            .paragraph {
+                font-size: 1.6rem;
+                margin-top: 2.4rem;
+                line-height: 1.5;
+                height: 300px;
+                overflow-y: hidden;
+                text-align: justify;
+                position: relative;
+            }
+            .signature {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+               display: flex;
+               justify-content: flex-end;
+               img {
+                margin-right: 15px;
+               }
+            }
+            #rocket-icon {
+                position: absolute;
+                bottom:10%;
+                right: 0;
+                height: 55px;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                img{
+                    height: 100%;
+                    width: auto;
+                }
+            }
+            
+        }
+    }
+    @include device(767px) {
+        .about-me-container {
+            flex-direction: column-reverse;
+            &__right {
+                .title {
+                    margin-right: 0;
+                }
+                .paragraph {
+                    text-align: center;
+                }
+                #rocket-icon{
+                    bottom: -15px;
+                }
+            }
+        }
+    }
+}

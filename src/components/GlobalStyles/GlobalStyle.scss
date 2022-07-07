@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+$clr-primary: rgb(247, 172, 35);
+$mobileWidth: 600px;
+$tabletWidth: 1024px;
+html {
+  font-size: 62.5%;
+  line-height: 1.0;
+  background-color: rgba(0, 0, 0, 0.918);
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+.title {
+  font-size: 3.2rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
+}
+@mixin bgWrapper {
+  // background-image: url('../../assets/images/bg.jpg');
+  background-color: #141414;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@mixin contentWidth {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+@mixin paddingPage($pd-left-right) {
+  padding-left: $pd-left-right;
+  padding-right: $pd-left-right;
+}
+
+@mixin screenWidth {
+  max-width: 100%;
+  width: 1600px;
+}
+
+@mixin device($deviceWidth) {
+  @media  (max-width: $deviceWidth) {
+    @content;
+  }
+  
+}
+@mixin for-phone-only {
+  @media (max-width: $mobileWidth) { @content; }
+}
+@mixin contentWrapper {
+  width: 100vw;
+  @include paddingPage(8rem);
+  padding-top: 140px;
+  @include device(1024px) {
+    @include paddingPage(3rem);
+  }
+  @include device(767px) {
+    @include paddingPage(1.6rem);
+  }
+}

@@ -1,0 +1,108 @@
+@use '../GlobalStyles/GlobalStyle.scss'as *;
+
+.home-wrapper {
+    position: relative;
+    @include contentWrapper;
+    @include bgWrapper;
+    .hero-container {
+        background-position: center;
+        @include contentWidth;
+        display: flex;
+        // grid-template-columns: 1fr 1fr;
+        min-height: 300px;
+
+        &__left {
+            flex-basis: 50%;
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            justify-content: space-between;
+            // background-image: url('../../assets/images/bg-left.png');
+            background-size: cover;
+            h3 {
+                text-align: left;
+                color: $clr-primary;
+                margin-left: 1rem;
+            }
+
+            h1 {
+                font-size: 5rem;
+                font-weight: 500;
+                height: 12rem;
+            }
+            p {
+                font-size: 1.6rem;
+                line-height: 1.5;
+            }
+            .contact-button {
+                display: flex;
+                font-size: 1.6rem;
+                text-decoration: none;
+                color: #fff;
+                outline: 0;
+                span:hover{
+                    border-color: $clr-primary;
+                    color: $clr-primary;
+                }
+
+                span {
+                padding: 1rem 1.2rem;
+
+                    padding: 8px;
+                    border: #fff solid 1px;
+                    transition: all .3s;
+                    border-radius: 15px;
+                }
+            }
+            .social-media {
+                gap: 1.2rem;
+                font-size: 3.2rem;
+                display: flex;
+            }
+        }
+
+        &__right {
+            flex-basis: 50%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // overflow: hidden;
+            .videoTag {
+                max-width: 100%;
+                height: 100%;
+                border: none;
+                source {
+                    background-color: #fff;
+                }
+                &:hover {
+                    background: transparent;
+                }
+            }
+            
+        }
+
+    }
+
+    @include device(767px) {
+        // @include paddingPage(1.6rem);
+        padding-top: 150px;
+        .hero-container {
+            flex-direction: column;
+            height: 100vh;
+            &-left {
+                position: relative;
+                z-index: 50;
+                // height: 500px;
+                h1 {
+                    text-align: center;
+                }
+            }
+            &-right {
+                img {
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}

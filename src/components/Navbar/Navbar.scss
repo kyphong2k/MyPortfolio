@@ -1,0 +1,131 @@
+@use '../GlobalStyles/GlobalStyle.scss' as *;
+.navbar-wrapper {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    @include contentWrapper;
+
+    padding-top: 0;
+    .navbar {
+        @include contentWidth;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 7.2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        z-index: 100;
+        box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+        border-radius: 16px;
+        background-color: #141414;
+        &-logo {
+            height: 7rem;
+            .logo {
+                height: 100%;
+                background: transparent;
+            }
+        }
+        a:focus {
+            outline: none;
+        }
+        &-list{
+            display: flex;
+            justify-content: center;
+            gap: 1.6rem;
+            &-link {
+                font-size: 1.6rem;
+                padding: 1rem 1.2rem;
+                text-decoration: none;
+                color: #fff;
+                transition: all .2s linear;
+                cursor: pointer;
+                font-weight: 500;
+                font-family: 'Montserrat', sans-serif;
+                &.active {
+                    color: $clr-primary;
+                    text-decoration: none;
+                    outline: 0;
+                }
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        .contact-page-button {
+            font-size: 1.6rem;
+            padding: 1rem 1.2rem;
+            text-decoration: none;
+            color: #fff;
+            border: #fff solid 1px;
+            border-radius: 15px;
+            &:hover , &:hover span{
+                border-color: $clr-primary;
+                color: $clr-primary;
+            transition: all .3s;
+    
+            }
+            span {
+            padding: 8px;
+    
+            }
+        }
+        .toggle-btn {
+            display: none;
+        }
+        
+        @include device(767px) {
+            position: relative;
+                    
+            &#open {
+                height: 100vh;
+
+                .contact-page-button {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    border: none;
+                    span {
+                        padding: 15px;
+                        border: #fff solid 1px;
+                        transition: all .3s;
+                        border-radius: 15px;
+                    }
+                }
+                .navbar-list {
+                    position: absolute;
+                    top: 15%;
+                    left: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2rem;
+                    &-link .active{
+                        color: $clr-primary;
+                    }
+                    
+                }
+                
+            }
+            .navbar-logo{ 
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .toggle-btn {
+                display: flex;
+                position: absolute;
+                top: 10px;
+                right: 0;
+            }
+            &#close {
+                .navbar-list ,.contact-page-button {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+
+
+}

@@ -1,0 +1,7 @@
+@use '../GlobalStyles/GlobalStyle.scss' as *;
+
+.contact-wrapper {
+    @include contentWrapper;
+    @include bgWrapper;
+
+}

@@ -1,0 +1,23 @@
+@use '../GlobalStyles/GlobalStyle.scss' as *;
+.timeline-wrapper {
+    @include contentWrapper;
+    @include bgWrapper;
+    .timeline-container {
+        @include contentWidth;
+        .vertical-timeline-element--education {
+           color: rgb(221, 203, 203);
+           .vertical-timeline-element-content{
+            background-color: #3e497a;
+
+           }
+           .vertical-timeline-element-title {
+                background-color: #3e497a;
+                color: $clr-primary;
+                font-size: 1.8rem;
+           }
+           .vertical-timeline-element-para {
+            font-size: 1.2rem;
+           }
+        }
+    }
+}
