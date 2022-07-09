@@ -41,14 +41,14 @@
                 margin-top: 2.4rem;
                 line-height: 1.5;
                 height: 300px;
-                overflow-y: hidden;
+                // overflow-y: hidden;
                 text-align: justify;
                 position: relative;
             }
             .signature {
                 width: 100%;
-                position: absolute;
-                bottom: 0;
+                // position: absolute;
+                // bottom: 0;
                display: flex;
                justify-content: flex-end;
                img {
@@ -75,11 +75,15 @@
         .about-me-container {
             flex-direction: column-reverse;
             &__right {
+                min-height: 600px;
+                height: fit-content ;
                 .title {
                     margin-right: 0;
                 }
                 .paragraph {
-                    text-align: center;
+                    text-align: justify;
+                    text-justify: inter-character;
+                    letter-spacing: 2;
                 }
                 #rocket-icon{
                     bottom: -15px;

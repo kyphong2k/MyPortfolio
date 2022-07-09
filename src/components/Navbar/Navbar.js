@@ -45,7 +45,7 @@ function Navbar() {
             })}
             
           </div>
-          <NavLink to='/contact' className='contact-page-button'><span>Contact me</span></NavLink>
+          <NavLink to='/contact' className={`contact-page-button $(({isActive}) => (isActive ? 'active' : inActive))`}><span>Contact me</span></NavLink>
       </div>
     </div>
   )

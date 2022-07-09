@@ -16,7 +16,7 @@
         padding-right: 1rem;
         z-index: 100;
         box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
-        border-radius: 16px;
+        border-radius: 8px;
         background-color: #141414;
         &-logo {
             height: 7rem;
@@ -57,7 +57,11 @@
             text-decoration: none;
             color: #fff;
             border: #fff solid 1px;
-            border-radius: 15px;
+            border-radius: 8px;
+            &.active {
+                border-color: $clr-primary;
+                color: $clr-primary;
+            }
             &:hover , &:hover span{
                 border-color: $clr-primary;
                 color: $clr-primary;
@@ -88,7 +92,7 @@
                         padding: 15px;
                         border: #fff solid 1px;
                         transition: all .3s;
-                        border-radius: 15px;
+                        border-radius: 8px;
                     }
                 }
                 .navbar-list {

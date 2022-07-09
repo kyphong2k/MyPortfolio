@@ -35,7 +35,7 @@ function MyTimeline() {
             <h3 className="vertical-timeline-element-title">
              Front End Intern at Pizitech Company Limited
             </h3>
-            <p className="vertical-timeline-element-para">Done a few mini project using some technologies: Html, Scss, Javascript, ReactJs</p>
+            <p className="vertical-timeline-element-para">Done a few mini project using some technologies: Html, Scss, Javascript and learning ReactJs</p>
           </VerticalTimelineElement>
           {/* <VerticalTimelineElement
             className="vertical-timeline-element--education"

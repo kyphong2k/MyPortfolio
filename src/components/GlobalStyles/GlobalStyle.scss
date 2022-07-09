@@ -26,6 +26,14 @@ html {
   font-family: 'Montserrat', sans-serif;
 
 }
+input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+}
+textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+}
 @mixin bgWrapper {
   // background-image: url('../../assets/images/bg.jpg');
   background-color: #141414;
@@ -66,7 +74,7 @@ a {
 @mixin contentWrapper {
   width: 100vw;
   @include paddingPage(8rem);
-  padding-top: 140px;
+  padding-top: 120px;
   @include device(1024px) {
     @include paddingPage(3rem);
   }

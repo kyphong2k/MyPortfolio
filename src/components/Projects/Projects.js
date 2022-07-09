@@ -13,7 +13,7 @@ function Projects() {
   return (
     <div className='projects-wrapper'>
       <div className="projects-container">
-          <h1 className="title">My projects</h1>
+          {/* <h1 className="title">My projects</h1> */}
           <div className="project-list">
               {projectData?.map((project, idx) => {return (
                 <div key={idx} className="project-list__item">
