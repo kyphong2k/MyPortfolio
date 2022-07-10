@@ -9,6 +9,9 @@
         min-height: 300px;
         .contact-form {
             flex-basis: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
             form {
                 width: 100%;    
                 font-size: 1.6rem;
@@ -20,7 +23,7 @@
                         color: white;
                         outline: none;
                         border: 1px solid rgba(255,255,255,.04);
-                        padding: 1.4rem 0 1.4rem 3.2rem;
+                        padding: 1.4rem 0 1.4rem 2.2rem;
                         border-radius: 8px;
                         flex-basis: 50%;
                     }
@@ -34,7 +37,17 @@
                     color: white;
                     outline: none;
                     border: 1px solid rgba(255,255,255,.04);
-                    padding: 1.4rem 0 1.4rem 3.2rem;
+                    padding: 1.4rem 0 1.4rem 2.2rem;
+                    border-radius: 8px;
+                }
+                input {
+                    width: 100%;
+                    margin-top: 1.8rem;
+                    background-color: #141414;
+                    color: white;
+                    outline: none;
+                    border: 1px solid rgba(255,255,255,.04);
+                    padding: 1.4rem 0 1.4rem 2.2rem;
                     border-radius: 8px;
                 }
                 input[type=submit] {
@@ -57,6 +70,36 @@
                     }
                 }
             }
+            .form-sent {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+            #return-form {
+                background-color: #141414;
+                color: $clr-primary;
+                opacity: 0.8;
+                outline: none;
+                padding: 1.4rem 0 1.4rem 1.4rem;
+                border: 1px solid rgba(255,255,255,.04);
+                
+                border-radius: 8px;
+                font-size: 1.6rem;
+                cursor: pointer;
+                display: block;
+                justify-content: center;
+                margin: 2.2rem auto 3.2rem;
+                max-width: 22rem;
+                &:hover {
+                    opacity: 1; 
+                }
+            }
         }
         .contact-img {
             flex-basis: 50%;
@@ -76,6 +119,10 @@
             form {
                 #form-info {
                     flex-direction: column;
+                    gap: 1.6rem;
+                    input{
+                        margin-top: 0;
+                    }
                 }
             }
         }
