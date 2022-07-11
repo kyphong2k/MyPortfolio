@@ -9,14 +9,14 @@ function Contact() {
   const [isFormShow, setIsFormShow] = useState(true)
   const sendEmail = e => {
     e.preventDefault();
-    setIsFormShow(false)
     emailjs.sendForm('service_gt8qote', 'template_olm4l17', form.current, 'DY3nkFG1qzzCYumV6')
       .then(result => {
         console.log(result.text)
+        setIsFormShow(false)
+
       }), (error) =>{
         console.log(error)
       }
-    console.log(form.current)
   }
   return (
       <div className='contact-wrapper'>
