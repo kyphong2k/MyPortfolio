@@ -29,6 +29,9 @@ html {
 input {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 textarea {
   font-family: 'Montserrat', sans-serif;
