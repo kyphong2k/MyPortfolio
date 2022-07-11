@@ -63,7 +63,7 @@
 
         &__right {
             flex-basis: 50%;
-            height: 400px;
+            min-height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -93,16 +93,15 @@
             &-left {
                 position: relative;
                 z-index: 50;
-                // height: 500px;
+                gap: 1.6rem;
+                min-height: 400px;
                 h1 {
                     text-align: center;
                 }
                 p{
                     margin-bottom: 2rem;
                 }
-                .contact-button {
-                    margin-bottom: 2rem;
-                }
+                
             }
             &-right {
                 img {
