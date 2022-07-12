@@ -24,17 +24,15 @@ function Navbar() {
               className={expandNavbar ? 'open' : 'close'}
               onClick ={() => setExpandNavbar(prev => !prev)}
               >
-              {/* <ToggleButton value="justify" aria-label="justified">
-                <FormatAlignJustifyIcon sx={{color: '#fff', fontSize: '28px'}}/>
-              </ToggleButton> */}
+              
               <span></span>
               <span></span>
               <span></span>
             </div>
         <div className='navbar' id={expandNavbar ? 'open' : 'close'}>
-            <div className='navbar-logo'>
+            <NavLink to="/" style={{display: 'block', cursor: 'pointer'}} className='navbar-logo'>
               <img src={myLogo} className='logo' alt='logo'/>
-            </div>
+            </NavLink>
             <div className='navbar-list'>
               {navbars.map((navbar, idx) => {
                 return (

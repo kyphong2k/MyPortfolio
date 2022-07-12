@@ -14,9 +14,10 @@
             flex-basis: 50%;
             display: flex;
             flex-direction: column;
-            height: 400px;
-            justify-content: space-between;
+            min-height: 400px;
+            // justify-content: space-between;
             background-size: cover;
+            gap: 2.4rem;
             h3 {
                 text-align: left;
                 color: $clr-primary;
@@ -63,7 +64,7 @@
 
         &__right {
             flex-basis: 50%;
-            min-height: 400px;
+            height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
