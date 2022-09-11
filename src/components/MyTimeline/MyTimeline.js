@@ -23,7 +23,7 @@ function MyTimeline() {
             <h3 className="vertical-timeline-element-title">
               Student at the University of Economics and Finance (UEF)
             </h3>
-            <p className="vertical-timeline-element-para"> Major: Information Technology <br/> GPA: 3.22</p>
+            <p className="vertical-timeline-element-para"> Major: Information Technology <br/> GPA: 3.24</p>
 
           </VerticalTimelineElement>
           <VerticalTimelineElement
