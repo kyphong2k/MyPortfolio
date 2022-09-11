@@ -31,10 +31,11 @@
             // min-height: 300px;
             margin-top: 1.6rem;
             display: flex;
-            gap: 3.2rem;
+            gap: 2.2rem;
             flex-wrap: wrap;
+            justify-content: center;
             &__item {
-                flex-basis: 33.33%;
+                flex-basis: 30%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -85,6 +86,7 @@
                         max-width: 100%;
                         border-radius: 16px;
                         overflow: hidden;
+                        min-height: 180px;
                         width: 100%;
                         img {
                             transition: all .5s;

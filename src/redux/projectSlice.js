@@ -20,6 +20,13 @@ export const projectSlice = createSlice({
                 linkRespository: 'https://github.com/kyphong2k/restaurant-coffee.git',
                 dateFinished: 'Mar 14 2012 10:00:00 AM'
             },
+            {
+                img: require('../assets/images/projectImg/themoviecollection.PNG'),
+                title: 'Built Movies Website use API',
+                technologies: ['ReactJS, Redux-toolkit, tailwindcss'],
+                linkRespository: 'https://github.com/kyphong2k/TheMoviesCollection.git',
+                dateFinished: 'Mar 14 2012 10:00:00 AM'
+            }
         ] 
     },
     reducers: {
