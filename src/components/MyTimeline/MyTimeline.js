@@ -13,6 +13,17 @@ function MyTimeline() {
       <div className="timeline-container">
         <VerticalTimeline>
           <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="04/2022 - 06/2022"
+            iconStyle={{ background: "#3e497a", color: "#fff" }}
+            icon={<WorkIcon />}
+          >
+            <h3 className="vertical-timeline-element-title">
+             ReactJs Developer Intern at FPT Information System
+            </h3>
+            <p className="vertical-timeline-element-para">Fisay: website for interview management of FPT Information System</p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
             contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             // contentStyle={ {borderTop: '5px solid #ccc', boderBottom: '0px'} }
             className="vertical-timeline-element--education"
@@ -21,7 +32,7 @@ function MyTimeline() {
             icon={<SchoolIcon />}
           >
             <h3 className="vertical-timeline-element-title">
-              Student at the University of Economics and Finance (UEF)
+              Studied at the University of Economics and Finance (UEF)
             </h3>
             <p className="vertical-timeline-element-para"> Major: Information Technology <br/> GPA: 3.24</p>
 
