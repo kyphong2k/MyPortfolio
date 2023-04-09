@@ -1,60 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 $clr-primary: rgb(247, 172, 35);
 $mobileWidth: 600px;
 $tabletWidth: 1024px;
+
 html {
   font-size: 62.5%;
   line-height: 1.0;
-  background-color: rgba(0, 0, 0, 0.918);
+  background-color: #161516;
   scroll-behavior: smooth;
   // overflow-x: hidden;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
+
 .title {
   font-size: 3.2rem;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 
 }
+
 input {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
+
 textarea {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
 }
+
 @mixin bgWrapper {
   // background-image: url('../../assets/images/bg.jpg');
-  background-color: #141414;
+  background-color: #161516;
   height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 @mixin contentWidth {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
 
 }
+
 a {
   text-decoration: none;
   color: #fff;
 }
+
 @mixin paddingPage($pd-left-right) {
   padding-left: $pd-left-right;
   padding-right: $pd-left-right;
@@ -66,21 +77,27 @@ a {
 }
 
 @mixin device($deviceWidth) {
-  @media  (max-width: $deviceWidth) {
+  @media (max-width: $deviceWidth) {
     @content;
   }
-  
+
 }
+
 @mixin for-phone-only {
-  @media (max-width: $mobileWidth) { @content; }
+  @media (max-width: $mobileWidth) {
+    @content;
+  }
 }
+
 @mixin contentWrapper {
   width: 100vw;
   @include paddingPage(8rem);
   padding-top: 120px;
+
   @include device(1024px) {
     @include paddingPage(3rem);
   }
+
   @include device(767px) {
     @include paddingPage(1.6rem);
   }

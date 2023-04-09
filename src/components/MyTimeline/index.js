@@ -1,52 +1,62 @@
-import React from 'react'
-import  './MyTimeline.scss' ;
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+import React from 'react';
+import './MyTimeline.scss';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 function MyTimeline() {
   return (
     <div className='timeline-wrapper'>
-      <div className="timeline-container">
+      <div className='timeline-container'>
         <VerticalTimeline>
           <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="04/2022 - 06/2022"
-            iconStyle={{ background: "#3e497a", color: "#fff" }}
+            className='vertical-timeline-element--education'
+            date='01/2023 - current'
+            iconStyle={{ background: '#3e497a', color: '#fff' }}
             icon={<WorkIcon />}
           >
-            <h3 className="vertical-timeline-element-title">
-             ReactJs Developer Intern at FPT Information System
-            </h3>
-            <p className="vertical-timeline-element-para">Fisay: website for interview management of FPT Information System</p>
+            <h3 className='vertical-timeline-element-title'>FrontEnd Developer at FPT Information System</h3>
+            <p className='vertical-timeline-element-para'>
+              Fisay: website for interview management of FPT Information System MIC: website for connection mentees for
+              mentors, education forum
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className='vertical-timeline-element--education'
+            date='10/2022 - 12/2022'
+            iconStyle={{ background: '#3e497a', color: '#fff' }}
+            icon={<WorkIcon />}
+          >
+            <h3 className='vertical-timeline-element-title'>FrontEnd Developer Intern at FPT Information System</h3>
+            <p className='vertical-timeline-element-para'>
+              Fisay: website for interview management of FPT Information System
+            </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
             // contentStyle={ {borderTop: '5px solid #ccc', boderBottom: '0px'} }
-            className="vertical-timeline-element--education"
-            date="09/2018 - curent"
-            iconStyle={{ background: "#3e497a", color: "#fff" }}
+            className='vertical-timeline-element--education'
+            date='09/2018 - 09/2022'
+            iconStyle={{ background: '#3e497a', color: '#fff' }}
             icon={<SchoolIcon />}
           >
-            <h3 className="vertical-timeline-element-title">
+            <h3 className='vertical-timeline-element-title'>
               Studied at the University of Economics and Finance (UEF)
             </h3>
-            <p className="vertical-timeline-element-para"> Major: Information Technology <br/> GPA: 3.24</p>
-
+            <p className='vertical-timeline-element-para'>
+              Major: Information Technology <br /> GPA: 3.24
+            </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="04/2022 - 06/2022"
-            iconStyle={{ background: "#3e497a", color: "#fff" }}
+            className='vertical-timeline-element--education'
+            date='04/2022 - 06/2022'
+            iconStyle={{ background: '#3e497a', color: '#fff' }}
             icon={<WorkIcon />}
           >
-            <h3 className="vertical-timeline-element-title">
-             Front End Intern at Pizitech Company Limited
-            </h3>
-            <p className="vertical-timeline-element-para">Done a few mini project using some technologies: Html, Scss, Javascript and learning ReactJs</p>
+            <h3 className='vertical-timeline-element-title'>Front End Intern at Pizitech Company Limited</h3>
+            <p className='vertical-timeline-element-para'>
+              Done a few mini project using some technologies: Html, Scss, Javascript and learning ReactJs
+            </p>
           </VerticalTimelineElement>
           {/* <VerticalTimelineElement
             className="vertical-timeline-element--education"
@@ -63,7 +73,7 @@ function MyTimeline() {
         </VerticalTimeline>
       </div>
     </div>
-  )
+  );
 }
 
-export default MyTimeline
+export default MyTimeline;
