@@ -5,18 +5,18 @@ import LinkIcon from '@mui/icons-material/Link';
 import {useSelector} from 'react-redux';
 import Fade from 'react-reveal/Fade';
 
-function Projects() {
+const Projects = React.forwardRef((props,ref) => {
   const [projectData, setProjectData] = useState();
   const projects = useSelector(state => state.projects.projects);
   useEffect(() => {
     setProjectData(projects);
   },[projects])
   return (
-    <div className='projects-wrapper'>
+    <div  id='projects' className='projects-wrapper'>
    <Fade left duration ={1150}>
-       <div className="projects-container">
+       <div  className="projects-container">
            {/* <h1 className="title">My projects</h1> */}
-           <div className="project-list">
+           <div ref={ref} className="project-list">
                {projectData?.map((project, idx) => {return (
                  <div key={idx} className="project-list__item">
                    <div className="project-item-wrapper">
@@ -48,6 +48,6 @@ function Projects() {
    </Fade>
      </div>
   )
-}
+})
 
 export default Projects

@@ -4,6 +4,9 @@
     position: relative;
     @include contentWrapper;
     @include bgWrapper;
+    padding-top: 120px;
+    // scroll-snap-align: start;
+
     .hero-container {
         background-position: center;
         @include contentWidth;
@@ -18,6 +21,7 @@
             // justify-content: space-between;
             background-size: cover;
             gap: 2.4rem;
+
             h3 {
                 text-align: left;
                 color: $clr-primary;
@@ -29,17 +33,20 @@
                 font-weight: 500;
                 height: 12rem;
             }
+
             p {
                 font-size: 1.6rem;
                 line-height: 1.5;
             }
+
             .contact-button {
                 display: flex;
                 font-size: 1.6rem;
                 text-decoration: none;
                 color: #fff;
                 outline: 0;
-                span:hover{
+
+                span:hover {
                     border-color: $clr-primary;
                     color: $clr-primary;
                 }
@@ -51,11 +58,13 @@
                     border-radius: 8px;
                 }
             }
+
             .social-media {
                 gap: 1.2rem;
                 font-size: 3.2rem;
                 display: flex;
-                a:focus{
+
+                a:focus {
                     border: none;
                     outline: none;
                 }
@@ -68,42 +77,50 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             // overflow: hidden;
             .videoTag {
                 max-width: 100%;
                 height: 100%;
                 border: none;
+
                 source {
                     background-color: #fff;
                 }
+
                 &:hover {
                     background: transparent;
                 }
             }
-            
+
         }
 
     }
 
     @include device(767px) {
         // @include paddingPage(1.6rem);
-        padding-top: 120px;
+        padding-top: 80px;
+
         .hero-container {
             flex-direction: column;
             height: 100vh;
+
             &-left {
                 position: relative;
                 z-index: 50;
                 gap: 1.6rem;
                 min-height: 400px;
+
                 h1 {
                     text-align: center;
                 }
-                p{
+
+                p {
                     margin-bottom: 2rem;
                 }
-                
+
             }
+
             &-right {
                 img {
                     z-index: 2;

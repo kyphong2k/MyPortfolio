@@ -7,13 +7,29 @@
 }
 
 body {
-  overflow-y: scroll;
   overflow-x: hidden;
 }
+
+
 
 $clr-primary: rgb(247, 172, 35);
 $mobileWidth: 600px;
 $tabletWidth: 1024px;
+
+a {
+  &:hover {
+    color: $clr-primary;
+  }
+
+  cursor: pointer;
+}
+
+.app {
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
 
 html {
   font-size: 62.5%;
@@ -48,7 +64,7 @@ textarea {
 @mixin bgWrapper {
   // background-image: url('../../assets/images/bg.jpg');
   background-color: #161516;
-  height: 100vh;
+  // height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -90,9 +106,8 @@ a {
 }
 
 @mixin contentWrapper {
-  width: 100vw;
+  // width: 100vw;
   @include paddingPage(8rem);
-  padding-top: 120px;
 
   @include device(1024px) {
     @include paddingPage(3rem);

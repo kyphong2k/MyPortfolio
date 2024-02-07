@@ -1,14 +1,18 @@
-@use '../GlobalStyles/GlobalStyle.scss' as *;
+@use '../GlobalStyles/GlobalStyle.scss'as *;
 
 .about-me-wrapper {
     @include contentWrapper;
     @include bgWrapper;
+    padding-top: 100px;
+    // scroll-snap-align: start;
+
     .about-me-container {
         @include contentWidth;
         display: flex;
         min-height: 300px;
-    
+
         gap: 3.2rem;
+
         &__left {
             flex-basis: 50%;
 
@@ -16,17 +20,20 @@
                 max-width: 100%;
                 width: 100%;
             }
-            
+
         }
+
         &__right {
             flex-basis: 50%;
             display: flex;
             flex-direction: column;
             position: relative;
             padding-bottom: 3rem;
-            &:hover .title{
+
+            &:hover .title {
                 color: $clr-primary;
             }
+
             .title {
                 transition: all .3s linear;
                 margin-top: 2.8rem;
@@ -36,6 +43,7 @@
                 font-family: 'Montserrat', sans-serif;
 
             }
+
             .paragraph {
                 font-size: 1.6rem;
                 margin-top: 2.4rem;
@@ -45,48 +53,57 @@
                 text-align: justify;
                 position: relative;
             }
+
             .signature {
                 width: 100%;
                 // position: absolute;
                 // bottom: 0;
-               display: flex;
-               justify-content: flex-end;
-               img {
-                margin-right: 15px;
-               }
+                display: flex;
+                justify-content: flex-end;
+
+                img {
+                    margin-right: 15px;
+                }
             }
+
             #rocket-icon {
                 position: absolute;
-                bottom:10%;
+                bottom: 10%;
                 right: 0;
                 height: 55px;
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
-                img{
+
+                img {
                     height: 100%;
                     width: auto;
                 }
             }
-            
+
         }
     }
+
     @include device(767px) {
         .about-me-container {
             flex-direction: column-reverse;
+
             &__right {
                 min-height: 600px;
-                height: fit-content ;
+                height: fit-content;
+
                 .title {
                     margin-right: 0;
                     margin-top: 0;
                 }
+
                 .paragraph {
                     text-align: justify;
                     text-justify: inter-character;
                     letter-spacing: 2;
                 }
-                #rocket-icon{
+
+                #rocket-icon {
                     bottom: -15px;
                 }
             }

@@ -4,10 +4,10 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
-function MyTimeline() {
+const MyTimeline = React.forwardRef((props,ref) => {
   return (
-    <div className='timeline-wrapper'>
-      <div className='timeline-container'>
+    <div id='timeline' className='timeline-wrapper'>
+      <div ref={ref} className='timeline-container'>
         <VerticalTimeline>
           <VerticalTimelineElement
             className='vertical-timeline-element--education'
@@ -15,11 +15,28 @@ function MyTimeline() {
             iconStyle={{ background: '#3e497a', color: '#fff' }}
             icon={<WorkIcon />}
           >
-            <h3 className='vertical-timeline-element-title'>FrontEnd Developer at FPT Information System</h3>
+            <h3 className='vertical-timeline-element-title'>FrontEnd Web Developer at FPT Information System</h3>
             <p className='vertical-timeline-element-para'>
-              Fisay: website for interview management of FPT Information System MIC: website for connection mentees for
-              mentors, education forum
+              <span>
+                <b style={{color: 'rgb(247, 172, 35)'}}>Fisay:</b> A website for interview management of FPT Information System 
+              </span>
+              <span>
+                <b style={{color: 'rgb(247, 172, 35)'}}>MIC:</b> A website for connection mentees for mentors, education forum
+              </span>
+              <span>
+                <b style={{color: 'rgb(247, 172, 35)'}}>ebadges:</b> A website for managing badges and awards for company employees
+              </span>
+              <span>
+                <b style={{color: 'rgb(247, 172, 35)'}}>eTrip:</b> A website for managing business trips.
+              </span>
+              <span>
+                <b style={{color: 'rgb(247, 172, 35)'}}>Admin Portal:</b> A website for configuring settings for an e-commerce platform and its associated mobile application.
+              </span>
+              <span>
+                <b style={{color: 'rgb(247, 172, 35)'}}>EVN:</b> A website for managing work-related equipment and travel requests
+              </span>
             </p>
+           
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className='vertical-timeline-element--education'
@@ -29,7 +46,9 @@ function MyTimeline() {
           >
             <h3 className='vertical-timeline-element-title'>FrontEnd Developer Intern at FPT Information System</h3>
             <p className='vertical-timeline-element-para'>
-              Fisay: website for interview management of FPT Information System
+              <span>
+                <b style={{color: 'rgb(247, 172, 35)'}}>Fisay:</b> A website for interview management of FPT Information System
+              </span>
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -44,7 +63,9 @@ function MyTimeline() {
               Studied at the University of Economics and Finance (UEF)
             </h3>
             <p className='vertical-timeline-element-para'>
-              Major: Information Technology <br /> GPA: 3.24
+              <span>
+                <b style={{color: 'rgb(247, 172, 35)'}}>Major: </b>Information Technology <br /> GPA: 3.24
+              </span>
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -55,7 +76,10 @@ function MyTimeline() {
           >
             <h3 className='vertical-timeline-element-title'>Front End Intern at Pizitech Company Limited</h3>
             <p className='vertical-timeline-element-para'>
-              Done a few mini project using some technologies: Html, Scss, Javascript and learning ReactJs
+              <span>
+                <b style={{color: 'rgb(247, 172, 35)'}}>Done a few mini project using some technologies: </b>
+                   Html, Scss, Javascript and learning ReactJs
+              </span>
             </p>
           </VerticalTimelineElement>
           {/* <VerticalTimelineElement
@@ -74,6 +98,6 @@ function MyTimeline() {
       </div>
     </div>
   );
-}
+})
 
 export default MyTimeline;

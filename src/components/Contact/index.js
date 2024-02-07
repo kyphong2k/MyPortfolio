@@ -19,7 +19,7 @@ function Contact() {
       }
   }
   return (
-      <div className='contact-wrapper'>
+      <div id='contact' className='contact-wrapper'>
         <div className="contact-container">
           <Fade bottom duration={1150}>
             <div className="contact-form">

@@ -9,11 +9,14 @@ import { useSelector } from 'react-redux';
 
 function Navbar() {
     const [expandNavbar, setExpandNavbar] = useState(false);
+    const [activeNav, setActiveNav] = useState('#home');
     const location = useLocation();
     
     const navbars = useSelector(state => state.navbar.navbars)
     useEffect(() => {
+      console.log('location', location)
       setExpandNavbar(false);
+      setActiveNav(location.hash)
     },[location]);
     
   return (
@@ -30,24 +33,25 @@ function Navbar() {
               <span></span>
             </div>
         <div className='navbar' id={expandNavbar ? 'open' : 'close'}>
-            <NavLink to="/" style={{display: 'block', cursor: 'pointer'}} className='navbar-logo'>
+            <a href="#home" style={{display: 'block', cursor: 'pointer'}} className='navbar-logo'>
               <img src={myLogo} className='logo' alt='logo'/>
-            </NavLink>
+            </a>
             <div className='navbar-list'>
               {navbars.map((navbar, idx) => {
                 return (
-                  <NavLink
+                  <a
                     key={idx} 
-                    to={navbar.path}
-                    className={`navbar-list-link $(({ isActive }) => (isActive ? 'active' : 'inActive'))`}
+                    href={navbar.path}
+                    className={`navbar-list-link`}
+                    // className={`navbar-list-link ${activeNav === navbar.path ? 'active' : 'inActive'}`}
                     >
                     {navbar.name}
-                  </NavLink>
+                  </a>
                 )
               })}
               
             </div>
-            <NavLink to='/contact' className={`contact-page-button $(({isActive}) => (isActive ? 'active' : inActive))`}><span>Contact me</span></NavLink>
+            <a href='mailto:hoangkyphong926@gmail.com' target='_blank' className={`contact-page-button $(({isActive}) => (isActive ? 'active' : inActive))`}><span>Contact me</span></a>
         </div>
       </Fade>
     </div>

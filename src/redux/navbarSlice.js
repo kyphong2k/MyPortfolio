@@ -6,20 +6,20 @@ const navbarSlice = createSlice({
         navbars: [
             {
                 name: 'Home',
-                path: '/'
+                path: '#home'
             },
             {
                 name: 'About Me',
-                path: '/about'
+                path: '#about'
 
             },
             {
                 name: 'Projects',
-                path: '/projects'
+                path: '#projects'
             },
             {
                 name: 'My Timeline',
-                path: '/timeline'
+                path: '#timeline'
             }
         ]
     },
