@@ -26,7 +26,7 @@ const Home = React.forwardRef((props,ref) => {
                         </Typed>
                     </h1>
                     <p>I have been working as a front-end web developer at an outsourcing company from January 2023 to the present and I am currently seeking a new, more challenging environment to further my career path.</p>
-                    <a className= 'contact-button' href='mailto:hoangkyphong926@gmail.com'><span>Contact Me</span></a>
+                    <a className= 'contact-button' target='_blank' href='mailto:hoangkyphong926@gmail.com'><span>Contact Me</span></a>
                     <div className='social-media'>
                           <a href="https://www.facebook.com/profile.php?id=100014541090043" target="_blank" rel="noopener noreferrer">
                             <FacebookIcon sx={{ "&:hover": { color: "#3B5998" } }}  fontSize='32px'/>
