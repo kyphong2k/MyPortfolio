@@ -6,7 +6,7 @@ import PanToolIcon from '@mui/icons-material/PanTool';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import myVideo from '../../assets/video/myHeroVideo.mp4';
-import cvPdf from '../../assets/pdf/HoangKyPhong-FrontEndWebDeveloper.pdf'
+import cvPdf from '../../assets/pdf/Front-End-Web-Developer_Hoang-Ky-Phong.pdf'
 import Fade from 'react-reveal/Fade'
 
 const Home = React.forwardRef((props,ref) => {
